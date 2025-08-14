@@ -1,0 +1,37 @@
+/* ejercicio 1 llamar estilos css desde un archivo externo */
+/*estilos generales de etiquetas (no recomendado)*/
+/*agregar fuentes externas para el h1*/
+
+@import url('https://fonts.googleapis.com/css2?family=Trebuchet+MS&display=swap');
+/*agregar fuentes internas dentro del proyecto*/
+@font-face
+{
+    font-family: Embassy;
+    src: url(../fonts/Embassy.ttf) format('truetype');
+}
+h1 {
+    color: #172a3d;
+    text-decoration: underline;
+    text-align: center;/*sirve para centrar el texto*/
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    font-family: 'Trebuchet MS', sans-serif;
+    text-decoration: double;
+    color: navy;
+    background-color: lightgrey;
+}
+a {
+    color: red;
+    text-decoration: none;/*quita el subrayado del enlace*/
+    display: block;
+    text-align: center;
+    background-color: lightgrey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p {
+    color: rgb(21, 77, 77);
+    /*font-family:'Courier New', Courier, monospace ;*/
+    font-family: Embassy, 'Trebuchet MS', sans-serif;/*utilizar una fuente interna*/
+}
+body{
+    background-color: antiquewhite;
+}

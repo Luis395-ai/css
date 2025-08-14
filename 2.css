@@ -1,0 +1,83 @@
+/*selectores */
+/*selectores universales*/
+/* etiquetas tienen un peso de > 1
+clases y pseudocalses > 10
+id >100
+estilos de linea >1000
+el !importan tiene mas peso que las anteriores */
+*{
+   color: blue;
+}
+h1{
+    color: rgb(243, 19, 19);
+}
+p{
+    color: rgb(182, 243, 15);
+}
+/*selectore por clase*/
+.titulo{
+    color: rgb(15, 243, 243);
+    font-size: 2em;
+}
+.parrafo{
+    color: rgb(59, 199, 106);
+    font-size: 1.5em;
+}
+/*selectores por id */
+#titulo{
+    color: rgb(243, 15, 15);
+    font-size: 2.5em;
+}
+#parrafo{
+    color: rgb(15, 243, 59);
+    font-size: 1.8em;
+}
+/*selectores por atributo*/
+a[href]{
+    color: rgb(15, 243, 26);
+    font-size: 1.2em;
+    
+}
+/*selectores por =*/
+a[href="https://www.google.com"]{
+    color: rgb(243, 15, 243);
+    font-size: 1.2em;
+}
+/*selectores de atributo por clase alt + 126*/
+[class~="amarillo"] {
+    color: yellow !important;
+}
+/*selectores de atributo por clase alt + 126*/
+[class~="verde"] {
+    color: green;
+}
+/*selectores de atributo por clase alt + 94*/
+[class^="verde"] {
+    color: yellow !important;
+
+}
+/*selectores de atributo por clase alt + 94*/
+[class $="azul"] {
+    color: blue !important;
+}
+/*selectores de atributo por clase * */
+[class*="rojo"] {
+    color: red !important;
+}
+/*selectores combinadores*/
+/*toma al germano adyacente que esta por debajo osea el h2*/
+h1 +h2{
+    color: rgb(81, 36, 165);
+}
+/*asi no tiene ningun efecto  */
+h2 + h2{
+    color: rgb(36, 165, 81);
+}
+/*selector hermano general */
+h1 ~ h3{
+    color: rgb(81, 36, 165);
+}
+/*selector hijo*/
+p > span{
+    color: rgb(0, 253, 42) !important;
+}   

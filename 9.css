@@ -1,0 +1,21 @@
+/*poistion
+relative 
+absolute 
+fixed
+sticky
+z-index
+
+*/
+/*opsition relative */
+body {
+    padding-top: 4em;
+}
+.menu {
+    position: fixed;
+    background: #74b0ec;
+    padding: 5em;
+    text-align: center;
+    font: 4em;
+     top: 0;
+     width: 100%;
+}

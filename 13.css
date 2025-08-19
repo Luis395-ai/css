@@ -1,0 +1,44 @@
+/*poistion
+::first-letter(elementos en bloque )
+::first-line(elementos en linea)
+::before
+::after
+::selection
+*/
+/*opsition relative */
+
+.title::first-letter {
+    color: red;
+    font-size: 2em;
+}
+
+
+.title::first-line {
+    color: blue;
+    font-weight: bold;
+}
+
+
+.inline {
+    display: block;
+}
+
+
+.inline::first-letter {
+    color: green;
+    font-size: 1.5em;
+}
+
+/* Texto resaltado con fondo rojo */
+.texto::selection {
+    color: rgb(1, 238, 238);
+    background-color: red; 
+}
+.guaranies::before {
+    content: 'Gs.';
+}
+
+.guaranies::after {
+    content: '.000';
+}
+

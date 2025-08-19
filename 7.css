@@ -1,0 +1,23 @@
+/*poistion
+relative 
+absolute 
+fixed
+sticky
+z-index
+
+*/
+/*opsition relative */
+.box-1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border: 2px solid rgb(56, 255, 6);
+    margin: 2em;
+    left: 30px;
+    top: 30px;
+    bottom: 100px;
+    right: 100px;
+}  

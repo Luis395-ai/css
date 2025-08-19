@@ -1,0 +1,38 @@
+/*lista
+resetear lista
+*/
+/*.lista {
+   padding-left: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+   list-style: none;
+
+}*/
+.lista {
+   
+    list-style-type: disc;
+}
+.lista {
+   
+    list-style-type: circle;
+}
+.lista {
+   
+    list-style-type: square;
+}
+.lista {
+   
+    list-style-type: decimal;
+}
+.lista {
+   
+    list-style-type: lower-roman;
+}
+.lista {
+   
+    list-style-type: upper-roman;
+}
+.lista-item {
+float: left;
+padding-right: 2em;
+}

@@ -1,0 +1,54 @@
+/*poistion
+pseudo clases
+visited
+active
+hover
+focus
+*/
+/*opsition relative */
+/* Enlaces */
+.link:link {
+    position: relative;
+    color: #0fa3f3;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #0ff30f; /* corregido: antes era .likn */
+}
+
+.link:active {
+    color: #f30f0f;
+}
+
+/* Botón */
+.button {
+   text-decoration: none;
+   display: inline-block;
+   background-color: burlywood;
+   padding: 0.5em 1em; /* corregido: más razonable */
+   border-radius: 12px;
+   color: #0ff30f;
+}
+
+.button:active {
+   transform: scale(0.9);
+   background-color: #f30f0f;
+}
+
+.button:hover {
+   background-color: #0fa3f3;
+   color: #e71212;
+   border: #0fa3f3 2px solid;
+}
+
+/* Input en foco */
+input:focus {
+   background-color: #e71212; /* corregido: afecta a cualquier input */
+}
+
+/* Párrafo con margen */
+.parrafo {
+   margin-top: 1000px;
+}
+

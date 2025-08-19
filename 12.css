@@ -1,0 +1,18 @@
+/*poistion
+relative 
+absolute 
+fixed
+sticky
+z-index
+
+*/
+/*opsition relative */
+.inline {
+   margin-right: 3em;
+   background: grey;
+   display: block;
+}
+.block {
+   background: lightblue;
+   display: inline;
+}

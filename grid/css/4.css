@@ -1,0 +1,51 @@
+/* grid*/
+/*
+funcion simax
+minmax() es una función que se usa dentro de grid-template-columns 
+o grid-template-rows para definir un tamaño mínimo
+ y máximo que puede tener una fila o columna en una grilla.
+*/
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(25, 189, 218);
+  margin: 0;
+  color: white;
+
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+
+
+.grid-item {
+  color: rgb(247, 243, 243);
+  border: 1px solid #0f0606;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+
+
+  
+
+ 
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+.grid-container {
+  display: grid;
+ grid-gap: 10px;
+height: 80vh;
+border: 3px solid #0f0606;
+grid-template-columns: repeat(3, minmax(100px, 1fr));
+justify-content: center;
+align-items: start;
+align-content: space-between;
+justify-content: center;
+}

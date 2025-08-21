@@ -1,0 +1,72 @@
+/* grid*/
+/*
+funcion simax
+minmax() es una función que se usa dentro de grid-template-columns 
+o grid-template-rows para definir un tamaño mínimo
+ y máximo que puede tener una fila o columna en una grilla.
+*/
+body {
+ 
+
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0;
+  color:black;
+  background-image:  radial-gradient(circle at 50% 50%, #0f0606, #000000);
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+.grid-item {
+  color: rgb(247, 243, 243);
+  border: 1px solid #0f0606;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+.header {
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.aside  
+{
+grid-column: span 1;
+  grid-row: 1/ -1;
+
+}
+.footer {
+  
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.gallery {
+grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, minmax(100px, 1fr));
+grid-gap: 5px;
+pading: 1rem;
+align-items: center;
+justify-content: center;
+ grid-auto-flow: dense;
+
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery img:nth-child(3) {
+  grid-row: 1/ span 2;
+  grid-row: 2/ span 2;
+}
+.gallery img:nth-child(4) {
+  grid-row: 1;
+  grid-row: 1/ span 2;
+}

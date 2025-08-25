@@ -1,0 +1,27 @@
+.menu {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+/*vista para dispositivos moviles*/
+body {
+    background-color: chartreuse;
+
+}
+@media screen  and (min-width:400px ) {
+    body {
+        background-color: burlywood;
+
+    }
+}
+@media screen and (min-width:720px) {
+    body {
+        background-color: coral;
+
+    }
+    .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,24 @@
+/* 1.css */
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blueviolet;
+    min-width: 320px;
+    max-width: 1400px;
+    padding: 1rem;
+}
+
+.video {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; 
+}
+
+.video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

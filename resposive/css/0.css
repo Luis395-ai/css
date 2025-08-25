@@ -1,0 +1,44 @@
+/* 0.css */
+
+/* Reset básico */
+body {
+    margin: 0;
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: radial-gradient(circle, red, yellow);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grid responsive */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid_item {
+    background: rgba(0,0,0,0.5);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Banner */
+.banner {
+    background: yellow;
+    padding: 10vmin;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: blueviolet;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-top: auto;
+    padding: 1rem;
+}

@@ -33,6 +33,7 @@ function mostrarValor($valor) {
     <link rel="stylesheet" href="estilo_contactos.css">
     <script>
         function validarFormulario() {
+            // valida el formulario antes de enviarlo, const sirve para declarar variables que no cambian
             const nombreInput = document.getElementById('nombre').value.trim();
             const telefonoInput = document.getElementById('telefono').value.trim();
             // expresion para validar
@@ -63,7 +64,7 @@ function mostrarValor($valor) {
         <h1>Modificar Contacto</h1>
         <!-- formulario para modificar, permite editar contacto que ya existe -->
         <form action="procesar.php" method="POST" onsubmit="return validarFormulario();">
-            <!-- campos ocultos para la accion y el id -->
+            <!-- campos ocultos para la accion y el id, para identificar la accion a realizar en el servidor-->
             <input type="hidden" name="accion" value="modificar">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <label for="nombre">Nombre y Apellido:</label>

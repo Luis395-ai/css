@@ -43,7 +43,7 @@ if ($accion === 'crear') {
     </html>
     <?php
 } elseif ($accion === 'modificar') {
-    // modificar contacto existente
+    // modificar contacto existente, limpiaa datos que vienen de un formulario html cuando queres modificar un contacto.
     $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
     $nombre = isset($_POST['nombre']) ? trim($_POST['nombre']) : '';
     $telefono = isset($_POST['telefono']) ? trim($_POST['telefono']) : '';

@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="estilo_contactos.css">
     <script>
         /**
-         * talida el formulario antes de enviarlo.
-         * tombre: solo letras y espacios.
+         * valida el formulario antes de enviarlo.
+         * nombre: solo letras y espacios.
          * telefono: solo numeros.
          */
         function validarFormulario() {
@@ -55,6 +55,7 @@
             <input type="text" id="telefono" name="telefono" placeholder="Ingresa tu numero" required>
             
             <label for="mensaje">Mensaje:</label>
+    <!--text area para comentarios-->
             <textarea id="mensaje" name="mensaje" placeholder="Escribi tu mensaje aca" required></textarea>
             
             <button type="submit">Enviar</button>

@@ -63,13 +63,13 @@ if (!$resultado) {
         }
 
         a {
-            background-color: #07d611;
+            background-color: #0df318ff;
             color: #fff;
             transition: background 0.3s;
         }
 
         a:hover {
-            background-color: #0ada37;
+            background-color: #0be91dff;
         }
 
         button {
@@ -107,7 +107,7 @@ if (!$resultado) {
             <th>Mensaje</th>
             <th>Acciones</th>
         </tr>
-
+       <!--recorre el resultado y crea una fila en la tabla por cada registro-->
         <?php while($fila = pg_fetch_assoc($resultado)): ?>
         <tr>
             <td><?php echo htmlspecialchars($fila['id'] ?? ''); ?></td>

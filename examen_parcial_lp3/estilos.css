@@ -18,7 +18,7 @@ nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold; /*texto en negrita*/
     transition: color 0.3s; /* efecto suave al pasar el mouse */
 }
 
@@ -29,9 +29,9 @@ nav a:hover {
 /* galeria de las imagenes */
 .galeria {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  /*permite que un elemento salte a la siguiente linea*/
     justify-content: center;
-    gap: 10px;
+    gap: 10px; /* espacio entre imagenes */
     margin: 20px 0;
 }
 

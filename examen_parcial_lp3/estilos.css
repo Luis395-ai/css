@@ -1,0 +1,110 @@
+/* estilo general*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* fondo general de la pagina */
+}
+
+/* barra de navegacion*/
+nav {
+    background-color: #0dee33;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* efecto suave al pasar el mouse */
+}
+
+nav a:hover {
+    color: #b700ff; /* cambio de color al pasar el mouse */
+}
+
+/* galeria de las imagenes */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.galeria img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /* recorta y ajusta la imagen sin deformar */
+    border-radius: 8px;
+    transition: transform 0.3s; /* efecto suave al hacer hover */
+}
+
+.galeria img:hover {
+    transform: scale(1.06); /* aumenta ligeramente la imagen al pasar el mouse */
+}
+
+/* 
+   divs con efecto hover
+    */
+.hover-div {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.hover-div:hover {
+    background-color: #cf0fff; /* cambio de fondo al pasar el mouse */
+}
+
+/* 
+   columnas de contenido
+  */
+.columnas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.columna {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+   pie de la pagina
+    */
+footer {
+    background-color: #20e20f;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/*diseño responsive*/
+@media (max-width: 800px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center; /* centra las imagenes en pantallas pequeñas */
+    }
+
+    .columnas {
+        flex-direction: column; /* columnas apilada en vertical */
+    }
+}

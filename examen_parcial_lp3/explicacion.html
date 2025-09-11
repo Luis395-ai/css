@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Explicacion de los codigos - Examen Parcial LP3</title>
+
+</head>
+<body>
+    <h1>Explicacion de los codigos utilizados</h1>
+
+    <h2>1. conexion.php</h2>
+    <p>Archivo que establece la conexion con la base de datos postgresql:</p>
+    <ul>
+        <li>Se define las variables <code>$servidor, $usuario, $password, $dbname, $puerto</code>.</li>
+        <li><code>pg_connect()</code> se usa para conectarme a la base de datos.</li>
+        <li>Se verifica si la conexion funciona o no y se muestra un mensaje.</li>
+    </ul>
+
+    <h2>2. contactos.php</h2>
+    <p>Formulario donde el usuario ingresa nombre, telefono y mensaje:</p>
+    <ul>
+        <li>Se usa <code>required</code> para que los campos no queden vacios.</li>
+        <li>Validación con JavaScript: 
+            <code>soloLetras.test(nombre)</code> ase que el nombre tenga solo letras.
+            <code>soloNumeros.test(telefono)</code> ase que el telefono tenga solo numeros.
+        </li>
+        <li>El formulario envia los datos a <code>procesar.php</code> mediante POST.</li>
+    </ul>
+
+    <h2>3. procesar.php</h2>
+    <p>Archivo que recibe los datos y realiza las acciones:</p>
+    <ul>
+        <li>Recibe  datos usando <code>$_POST['nombre']</code>, <code>$_POST['telefono']</code> y <code>$_POST['mensaje']</code>.</li>
+        <li>Según el valor de <code>accion</code> puede agregar, modificar o eliminar registros en la tabla <code>contactos</code>.</li>
+        <li>Se utiliza las funciones de PostgreSQL: <code>pg_query()</code> para ejecutar las consultas.</li>
+        <li>Después de cada accion, se redirige a <code>mostrar_contacto.php</code> con <code>header("Location: mostrar_contacto.php");</code>.</li>
+        <li>Si es un nuevo registro, tambien muestra la pantalla de bienvenida con el mensaje "Bienvenido (Nombre)"</li>
+    </ul>
+
+    <h2>4. mostrar_contacto.php</h2>
+    <p>Lista todos los contactos guardados en la base de datos:</p>
+    <ul>
+        <li>Se hace una consulta: <code>SELECT * FROM contactos ORDER BY id</code>.</li>
+        <li>Se recorre el resultado con <code>pg_fetch_assoc()</code> para mostrar cada fila en una tabla HTML.</li>
+        <li>Cada fila tiene botones de Modificar y Eliminar que envían el <code>id</code> del contacto a los archivos correspondientes.</li>
+    </ul>
+
+    <h2>5. modificar.php</h2>
+    <p>Formulario que carga los datos existentes de un contacto para poder modificarlos:</p>
+    <ul>
+        <li>Se recibe el <code>id</code> del contacto y se hace <code>SELECT * FROM contactos WHERE id=$id</code>.</li>
+        <li>Los campos del formulario se llenan con <code>value="<?php echo htmlspecialchars($fila['nombre']); ?>"</code> para evitar errores con caracteres especiales.</li>
+        <li>Al enviar, se manda a <code>procesar.php</code> con <code>accion="modificar"</code>.</li>
+    </ul>
+
+    <h2>6. Flujo general</h2>
+    <ul>
+        <li>El usuario completa el formulario y envaa los datos.</li>
+        <li><code>procesar.php</code> guarda el registro y redirige a <code>mostrar_contacto.php</code>.</li>
+        <li>En la lista de contactos puede modificar o eliminar cualquier registro.</li>
+        <li>Todo el proyecto se conecta mediante <code>conexion.php</code>.</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* 
+   estilos generales
+ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* fondo claro para toda la pagina */
+}
+/* 
+   barra de navegacion
+*/
+nav {
+    background-color: #07d811;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* un efecto suave al pasar el mouse */
+}
+nav a:hover {
+    color: #ffd700; /* cambia a dorado al pasar el mouse */
+}
+/* 
+   titulo principal
+*/
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #a007cf;
+}
+
+/*
+   formulario
+*/
+form {
+    max-width: 500px;          /* ancho maximo */
+    margin: 20px auto;          /* centrado horizontal */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;                  /* espacio entre elementos del formulario */
+}
+
+/* etiquetas (labels) */
+label {
+    font-weight: bold;
+    color: #e219fd;
+}
+
+/* campos de texto y text area */
+input,
+textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box; /* asegura que padding no rompa el ancho */
+}
+
+/* boton de envio */
+button {
+    background-color: #12d80b;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s; /* efecto suave al pasar el mouse */
+}
+
+button:hover {
+    background-color: #df0ece; /* color de hover */
+}
+
+/* diseño responsive */
+@media (max-width: 600px) {
+    form {
+        width: 90%; /* se ajusta en pantalla chica */
+    }
+}

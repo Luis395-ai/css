@@ -13,7 +13,7 @@ if ($result && ($user = pg_fetch_assoc($result))) {
     if (md5($password) === $user['password']) {
         $_SESSION['id_user'] = $user['id_user'];
         $_SESSION['username'] = $user['username'];
-        header('Location: dashboard.php'); 
+        header('Location: mind.php'); 
         exit;
     } else {
         header('Location: index.php?alert=2'); 
